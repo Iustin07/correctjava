@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "1e1270d2-0abc-442a-b0d0-3f91c6f2ba78",
+		"name": "Correct an address",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wrong city sample",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"countryName\" : \"France\",\r\n    \"stateName\" : \"Île-de-France \",\r\n    \"cityName\" : \"R\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9192/addresses/correctAddress",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"addresses",
+						"correctAddress"
+					]
+				},
+				"description": "Send an address, get corrected address as a response."
+			},
+			"response": []
+		},
+		{
+			"name": "Add all cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9192/cities/addAllCities",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"cities",
+						"addAllCities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add all countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9192/countries/addAllCountries",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"countries",
+						"addAllCountries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add all states",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9192/states/addAllStates",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"states",
+						"addAllStates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9192/v2/api-Docs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9192/v2/api-Docs",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"v2",
+						"api-Docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wrong state sample",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"countryName\" : \"Romania\",\r\n    \"stateName\" : \"Neamt\",\r\n    \"cityName\" : \"Murgeni\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9192/addresses/correctAddress",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"addresses",
+						"correctAddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wrong country",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"countryName\" : \"Romania\",\r\n    \"stateName\" : \"Neamt\",\r\n    \"cityName\" : null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9192/addresses/correctAddress",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"addresses",
+						"correctAddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Combo letters",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"countryName\" : \"RO\",\r\n    \"stateName\" : \"iasi\",\r\n    \"cityName\" : \"iAsI\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9192/addresses/correctAddress",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"addresses",
+						"correctAddress"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
